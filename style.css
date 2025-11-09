@@ -17,7 +17,7 @@ body {
 header {
   background: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 20px;  
   border-bottom: 1px solid #ddd;
   position: relative;
 }
@@ -47,12 +47,14 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
+  align-items: center; /* ✅ Add this */
   padding: 15px 0;
 }
 
 nav ul li {
-  margin: 0 25px;
+  margin: 0 20px; /* Increase spacing */
 }
+
 
 nav ul li a {
   color: #ecf0f1;
@@ -62,7 +64,12 @@ nav ul li a {
   padding: 10px 15px;
   border-radius: 5px;
   transition: all 0.3s;
+  display: flex;            
+  align-items: center;       
+  justify-content: center;   
+  height: 40px;             
 }
+
 
 nav ul li a:hover,
 nav ul li a.active {
@@ -278,6 +285,38 @@ nav ul li a.active {
   color: #555;
 }
 
+/* Style for the notification badge */
+.notification-bell.has-new-notifications::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+/* Styling for Today's Special Event */
+.todays-events .event-card {
+  background-color: #e0f7fa; /* Light blue background */
+  border: 2px solid #00bcd4; /* Cyan border */
+  box-shadow: 0 8px 25px rgba(0, 188, 212, 0.2); /* Cyan shadow */
+  transform: scale(1.02); /* Slightly larger */
+}
+
+.todays-events .event-card h3 {
+  color: #00796b; /* Darker cyan for heading */
+}
+
+.todays-events .event-card .btn {
+  background-color: #00bcd4; /* Cyan button */
+}
+
+.todays-events .event-card .btn:hover {
+  background-color: #0097a7; /* Darker cyan on hover */
+}
+
 /* ---------- FOOTER ---------- */
 footer {
   background-color: #2c3e50;
@@ -290,12 +329,13 @@ footer {
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: column;
-    align-items: center;
+    /* Keep as row to ensure items stay on one line, if possible */
+    /* flex-direction: column; */
+    /* align-items: center; */
   }
 
   nav ul li {
-    margin: 12px 0;
+    margin: 0 5px; /* Further reduced margin for very small screens */
   }
 
   .hero h2 {

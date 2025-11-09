@@ -46,12 +46,12 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  /* Removed flex-wrap to keep items on one line */
   padding: 12px 0;
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 0 10px; /* Consistent margin with style.css */
 }
 
 nav ul li a {
@@ -197,11 +197,10 @@ footer {
   }
 
   nav ul {
-    flex-direction: column;
-    align-items: center;
+    /* Removed flex-direction: column and align-items: center for single line */
   }
 
   nav ul li {
-    margin: 8px 0;
+    margin: 0 5px; /* Consistent margin with style.css responsive */
   }
 }
