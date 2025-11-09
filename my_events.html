@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Events | Department Event Management Portal</title>
+  <link rel="stylesheet" href="my_events.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Department Event Management Portal</h1>
+    <p>Your registered events</p>
+    <div class="notification-bell"><a href="#">🔔</a></div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="notice.html">Notice Board</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="my_events.html" class="active" id="my-events-nav-link">My Events</a></li>
+      <li><a href="login.html" id="login-logout-link">Login</a></li>
+    </ul>
+  </nav>
+
+  <div id="notification-popup" class="notification-popup">
+    <div class="notification-header">
+      <h4>Notifications</h4>
+      <button id="close-popup">&times;</button>
+    </div>
+    <div class="notification-body">
+      <!-- Notifications will be dynamically inserted here -->
+    </div>
+  </div>
+
+  <!-- MY EVENTS SECTION -->
+  <section class="my-events">
+    <h2>My Registered Events</h2>
+    <p class="subtitle">Here are the events you have registered for.</p>
+
+    <div class="event-list" id="my-events-list">
+      <!-- Registered events will be dynamically inserted here by JavaScript -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Department of Computer Science | All Rights Reserved</p>
+  </footer>
+
+  <script src="my_events.js"></script>
+  <script src="nav_handler.js"></script>
+  <script src="notification.js"></script>
+</body>
+</html>

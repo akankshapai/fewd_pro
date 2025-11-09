@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notice Board | Department Event Management Portal</title>
+  <link rel="stylesheet" href="notice.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Department Event Management Portal</h1>
+    <p>Stay updated with the latest departmental news and announcements</p>
+    <div class="notification-bell"><a href="#">🔔</a></div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="notice.html" class="active">Notice Board</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="my_events.html" id="my-events-nav-link">My Events</a></li>
+      <li><a href="login.html" id="login-logout-link">Login</a></li>
+    </ul>
+  </nav>
+
+  <div id="notification-popup" class="notification-popup">
+    <div class="notification-header">
+      <h4>Notifications</h4>
+      <button id="close-popup">&times;</button>
+    </div>
+    <div class="notification-body">
+      <!-- Notifications will be dynamically inserted here -->
+    </div>
+  </div>
+
+  <!-- NOTICE BOARD SECTION -->
+  <section class="notice-board">
+    <h2>📢 Department Notice Board</h2>
+    <p class="subtitle">Find all official circulars, event updates, and important announcements here.</p>
+
+    <div class="notices">
+      <div class="notice">
+        <h3>Seminar on Artificial Intelligence</h3>
+        <p>We are pleased to announce an upcoming seminar on “AI in Education”.<br>
+        <b>Date:</b> 12 November 2025<br>
+        <b>Venue:</b> Seminar Hall 2</p>
+      </div>
+
+      <div class="notice">
+        <h3>Workshop on Web Development</h3>
+        <p>Join our hands-on workshop covering HTML, CSS, and JavaScript.<br>
+        <b>Date:</b> 18 November 2025<br>
+        <b>Coordinator:</b> Prof. A. Kumar</p>
+      </div>
+
+      <div class="notice">
+        <h3>Department Fest 2025</h3>
+        <p>Annual technical and cultural fest registration is now open!<br>
+        <b>Event Dates:</b> 25–27 November 2025<br>
+        <b>Contact:</b> dept.events@gmail.com</p>
+      </div>
+
+      <div class="notice">
+        <h3>Holiday Notice</h3>
+        <p>The department will remain closed on <b>14 November 2025</b> for Children’s Day celebrations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Department of Computer Science | All Rights Reserved</p>
+  </footer>
+
+  <script src="nav_handler.js"></script>
+  <script src="notification.js"></script>
+</body>
+</html>

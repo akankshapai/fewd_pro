@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | Department Event Management Portal</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Department Event Management Portal</h1>
+    <p>Create your account to stay updated on events and announcements</p>
+    <div class="notification-bell"><a href="#">🔔</a></div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="notice.html">Notice Board</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="my_events.html" id="my-events-nav-link">My Events</a></li>
+      <li><a href="signup.html" class="active" id="login-logout-link">Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <div id="notification-popup" class="notification-popup">
+    <div class="notification-header">
+      <h4>Notifications</h4>
+      <button id="close-popup">&times;</button>
+    </div>
+    <div class="notification-body">
+      <!-- Notifications will be dynamically inserted here -->
+    </div>
+  </div>
+
+  <!-- SIGNUP SECTION -->
+  <section class="signup-section">
+    <div class="signup-box">
+      <h2>Create Account</h2>
+      <form action="#" method="post">
+        <div class="input-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          <span id="name-validation-msg" class="validation-msg"></span>
+        </div>
+
+        <div class="input-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+          <span id="phone-validation-msg" class="validation-msg"></span>
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          <span id="email-validation-msg" class="validation-msg"></span>
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Create a password" required>
+          <span id="password-validation-msg" class="validation-msg"></span>
+        </div>
+
+        <button type="submit" class="btn">Sign Up</button>
+
+        <p class="login-text">
+          Already have an account? <a href="login.html">Login</a>
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Department of Computer Science | All Rights Reserved</p>
+  </footer>
+
+  <script src="nav_handler.js"></script>
+  <script src="signup.js"></script>
+  <script src="notification.js"></script>
+</body>
+</html>

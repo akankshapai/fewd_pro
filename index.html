@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Department Event Management Portal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <h1>Department Event Management Portal</h1>
+      <p>Your one-stop platform for departmental updates and events</p>
+      <div class="notification-bell"><a href="#">🔔</a></div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="notice.html">Notice Board</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="my_events.html" id="my-events-nav-link">My Events</a></li>
+        <li><a href="login.html" id="login-logout-link">Login</a></li>
+      </ul>
+    </nav>
+
+    <div id="notification-popup" class="notification-popup">
+      <div class="notification-header">
+        <h4>Notifications</h4>
+        <button id="close-popup">&times;</button>
+      </div>
+      <div class="notification-body">
+        <!-- Notifications will be dynamically inserted here -->
+      </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-content">
+        <h2>
+          Welcome <span id="welcome-user"></span> to the Department Portal
+        </h2>
+        <p>
+          Stay informed about upcoming events, notices, and announcements.
+          Access everything you need to stay connected with your department.
+        </p>
+        <a href="#" class="btn">Explore Now</a>
+      </div>
+    </section>
+
+    <!-- TODAY'S EVENTS -->
+    <section class="todays-events">
+      <h2>🗓️ Today's Events</h2>
+      <div id="todays-events-container" class="events-container">
+        <!-- Today's events will be loaded here by JavaScript -->
+      </div>
+    </section>
+
+    <!-- LATEST NOTICES -->
+    <section class="notice-board">
+      <h2>📜 Latest Notices</h2>
+      <div class="notices">
+        <div class="notice">
+          <h3>Workshop: Artificial Intelligence</h3>
+          <p>
+            Join us for a two-day workshop on AI fundamentals and project
+            development.<br /><b>Date:</b> 15 Nov 2025
+          </p>
+        </div>
+        <div class="notice">
+          <h3>Seminar: Cybersecurity Awareness</h3>
+          <p>
+            Learn the best practices to stay safe online in this expert-led
+            seminar.<br /><b>Date:</b> 20 Nov 2025
+          </p>
+        </div>
+        <div class="notice">
+          <h3>Hackathon 2025</h3>
+          <p>
+            Participate in our upcoming Hackathon and compete with the best
+            minds!<br /><b>Deadline:</b> 25 Nov 2025
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2025 Department of Computer Science | All Rights Reserved</p>
+    </footer>
+
+    <script src="nav_handler.js"></script>
+    <script src="home.js"></script>
+  </body>
+</html>
